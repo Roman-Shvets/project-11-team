@@ -1,0 +1,137 @@
+// buttons------------
+.mimino-buttons {
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    background-color: $black;
+    color: $accent;
+    width: 236px;
+    height: 48px;
+    border: 2px solid $black;
+    border-radius: 25px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:active {
+        background-color: $white;
+    }
+    &--bggrey {
+        border: 2px solid $white;
+        background-color: $bgblackout-color;
+    }
+    &--link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    &--bgblack {
+        
+        &:hover, &:active {
+            border: 2px solid $accent;
+        }
+    }
+    &--border-lemon {
+        @media screen and (min-width:$tablet) {
+            border: 2px solid $primary-bg;
+        }
+    }
+    &--booking {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $white;
+        width: 100%;
+        height: 64px;
+        border: 1px solid $accent;
+        @media screen and (min-width:$tablet) {
+            font-size: 24px;
+            line-height: 29px;
+             width: 434px;   
+            }
+        &:hover, &:active {
+            background-color: $accent;
+            color: $black;
+        }
+    }
+    &--booking-modal {
+        border-radius: 2px;
+        height: 64px;
+        @media screen and (min-width:$tablet){
+         width: 592px;}
+    }
+    &--white-border {
+        border: 2px solid $white;
+    }
+   &--lemon-border {
+    border: 2px solid $secondary-bg;
+   }
+}
+// link--------
+.return-link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    
+    letter-spacing: 0.02em;
+    color: $secondary-text;
+    display: inline-flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width:$tablet) {
+        font-size: 20px;
+        line-height: 24px;
+        }
+    &__arrow {
+        margin-left: 12.75px;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        @media screen and (min-width:$tablet) {
+             margin-left: 16.75px;   
+            }
+    }
+   &__arrow-icon {
+    fill: $secondary-text;
+   }
+   &:hover, &:active {
+    color: $accent;
+   }
+   &:hover > &__arrow {
+       opacity: 0;
+   }
+}
+//----arrow------
+.slider-arrow {
+    display: inline-block;
+    &__arrow-icon {
+        fill: $white;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover &__arrow-icon { 
+            fill: $accent;   
+    }
+}
+.swipe-button--active:hover,
+.swipe-button--active:focus {
+    color: $accent;
+}
+
+.swipe-button--active {
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swipe-button--svg:focus,
+.swipe-button--svg:hover {
+    fill: $accent;
+}
+
+.swipe-button--svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+

@@ -1,0 +1,28 @@
+@mixin text($weight: 700, $size: 16px, $lheight: 1.25, $transform: none, $textdecor: none, $style: normal) {
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lheight;
+    text-transform: $transform;
+    text-decoration: $textdecor;
+}
+@mixin for-phone-only {
+    @media (max-width: $mobile) {
+        @content;
+    }
+
+}
+
+@mixin for-tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+
+}
+
+@mixin for-desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+
+}
